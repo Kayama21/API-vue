@@ -7,7 +7,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Implenentation PWA and Nuxt' }
+      { hid: 'description', name: 'description', content: 'Implementation of Nuxst PWA with Bulma Framework' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -36,11 +36,16 @@ module.exports = {
     }
   },
 
+  plugins: [ 
+    { src: '@/plugins/youtube.js', ssr: false } 
+  ],
+
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/bulma',
     '@nuxtjs/pwa'
   ]
+  
 }
 

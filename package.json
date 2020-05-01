@@ -17,7 +17,8 @@
     "@nuxtjs/bulma": "^1.2.7",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nuxt": "^2.12.2"
+    "nuxt": "^2.12.2",
+    "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

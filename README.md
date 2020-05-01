@@ -1,6 +1,6 @@
 # nuxt-pwa
 
-> Implenentation PWA and Nuxt
+> Implementation of Nuxt PWA with Bulma Framework
 
 ## Build Setup
 

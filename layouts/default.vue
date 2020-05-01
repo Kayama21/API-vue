@@ -1,13 +1,5 @@
 <template>
-  <div>
-    <section class="hero has-text-centered is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">PWA News</h1>
-                <h2 class="subtitle">All the headlines making the wavy!</h2>
-            </div>
-        </div>
-    </section>
+  <div class="background-color">
     <nuxt/>
   </div>
 </template>
@@ -56,6 +48,10 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.background-color {
+  background-color: #372411;
 }
 </style>
 
