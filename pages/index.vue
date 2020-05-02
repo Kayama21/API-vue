@@ -20,18 +20,18 @@
             <a class="navbar-item is-active">
               Home
             </a>
-            <a class="navbar-item">
-              Examples
-            </a>
-            <a class="navbar-item">
-              Documentation
+            
+              <nuxt-link to="/oneMeal" class="navbar-item"> One Meal </nuxt-link>
+            
+            <a class="navbar-item" href="https://www.themealdb.com/api.php">
+              List API
             </a>
             <span class="navbar-item">
-              <a class="button is-primary is-inverted">
+              <a class="button is-primary is-inverted" href="https://github.com/Kayama21/API-vue">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
-                <span>Download</span>
+                <span>Git Repsitory</span>
               </a>
             </span>
           </div>
@@ -41,9 +41,7 @@
   </div>  
 </section>
 
-<section class="section">
-    <div class="container is-widescreen">
-      <div class="columns is-multiline is-centered">
+    <div class="hero-body">
       <div class="columns is-vcentered">
         <div class="column is-one-quarter">
           <app-logo/>
@@ -57,26 +55,9 @@
           <app-logo/>
         </div>
       </div>
-
-      <div class="columns is-multiline">
-      <div class="columns is-vcentered" v-for="(meal, index) in meals" :key="index">
-        <div class="column is-8">
-            <no-ssr  placeholder="Loading...">
-             <youtube  @ready="ready" :player-vars="{ autoplay: 1 }" :video-id="meal.strYoutube" />
-            </no-ssr>
-        </div>
-        <div class="column text-white">
-          <!-- <img :src="meal.strMealThumb" :alt="meal.strMeal" width="200"> -->
-          <h1 class="subtitle"> {{ meal.strMeal }} </h1><br>
-          <div>{{ meal.strInstructions }}</div>
-        </div>
-      </div>
-      </div>
-      </div>
     </div>
-  </section>
 
-<section class="section">
+    <section class="section">
         <div class="container">
             <div class="columns is-multiline">
                 <div
@@ -97,6 +78,7 @@
             </div>
         </div>
     </section>
+
 </div>
 </template>
 
@@ -104,13 +86,6 @@
 import AppLogo from '~/components/AppLogo.vue'
 
 export default {
-  async asyncData({ app }) {
-    const { meals } = await app.$axios.$get(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`
-    );
-
-    return { meals };
-  },
   async asyncData({ app }) {
     const { categories } = await app.$axios.$get(
       `https://www.themealdb.com/api/json/v1/1/categories.php`
